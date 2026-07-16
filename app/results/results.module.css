@@ -1,0 +1,24 @@
+.heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.choiceLine {
+  color: var(--fg-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.choiceValue {
+  color: var(--fg);
+}
+
+.message {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.link {
+  display: inline-block;
+}

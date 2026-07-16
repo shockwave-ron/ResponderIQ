@@ -1,0 +1,32 @@
+.heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 640px;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover .description {
+  color: var(--fg);
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: var(--fg-muted);
+  font-size: 0.95rem;
+}
