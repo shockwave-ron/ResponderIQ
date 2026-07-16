@@ -1,3 +1,13 @@
+# Archived: Clinical IQ V1 Root Styles
+
+- **Original file path:** `styles.css` (repository root)
+- **Original purpose:** Global styles for the Clinical IQ V1 prototype — dark theme and `.shell`/`.hero`/`.card`/`.grid` utility classes. Only ever imported by the inert root `layout.tsx`.
+- **Date archived:** 2026-07-16
+- **Reason archived:** Imported exclusively by a file that Next.js never executes (root `layout.tsx`), making this inert by extension. Functionally superseded by the live `app/globals.css`.
+
+## Original Content
+
+```css
 :root { color-scheme: dark; font-family: Arial, Helvetica, sans-serif; }
 * { box-sizing: border-box; }
 body { margin: 0; background: #0c0f14; color: #f7f7f7; }
@@ -14,3 +24,4 @@ textarea { width: 100%; min-height: 110px; background: #0c0f14; color: white; bo
 .secondary { background: transparent; color: white; }
 small, .muted { opacity: .7; }
 @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+```

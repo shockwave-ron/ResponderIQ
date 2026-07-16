@@ -1,3 +1,13 @@
+# Archived: Clinical IQ V1 Scenario Page
+
+- **Original file path:** `scenario/page.tsx` (top-level, sibling to `app/`)
+- **Original purpose:** Client-side React component for the Clinical IQ V1 scenario interaction — fetched live state from `/api/scenario`, rendered scene observations, a rationale textarea, action buttons, a phase-based debrief, and a sidebar showing safety/trust/elapsed time/resources/score.
+- **Date archived:** 2026-07-16
+- **Reason archived:** Never reachable through the live application (outside `app/`, so App Router never served it) and non-functional as committed — imports `ScenarioAction`/`ScenarioState` from `@/lib/types`, which does not exist anywhere in this repository. Preserved for its design ideas (rationale-before-action, visible-state sidebar, phase-based debrief), which are approved for future UX consideration but explicitly not for Milestone 2 implementation.
+
+## Original Content
+
+```tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -87,3 +97,4 @@ export default function ScenarioPage() {
     </main>
   );
 }
+```

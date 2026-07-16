@@ -1,3 +1,13 @@
+# Archived: Clinical IQ V1 Root Landing Page
+
+- **Original file path:** `page.tsx` (repository root — not `app/page.tsx`)
+- **Original purpose:** Old landing page branded "Clinical IQ V1," linking to `/scenario`.
+- **Date archived:** 2026-07-16
+- **Reason archived:** Never executed by Next.js — outside `app/`, so App Router never serves it, regardless of what it links to. Fully superseded by the live `app/page.tsx`.
+
+## Original Content
+
+```tsx
 import Link from "next/link";
 
 export default function HomePage() {
@@ -15,3 +25,4 @@ export default function HomePage() {
     </main>
   );
 }
+```

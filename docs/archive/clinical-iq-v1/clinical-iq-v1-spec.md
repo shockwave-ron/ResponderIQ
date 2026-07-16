@@ -1,3 +1,13 @@
+# Archived: Clinical IQ V1 Specification
+
+- **Original file path:** `types.ts` (repository root)
+- **Original purpose:** A plain-text project specification document — scope, build tracks, runtime boundaries, canonical flow, UI rules, scoring rules, and acceptance criteria for the "Clinical IQ V1" prototype. Not TypeScript despite the extension; nothing imported it.
+- **Date archived:** 2026-07-16
+- **Reason archived:** Mislabeled as a `.ts` file while containing prose specification, not code. Superseded as the active category authority by the current 11-member `PerformanceCategory` list (Program Director decision, 2026-07-16) — preserved here as historical record, not as an implementation target.
+
+## Original Content
+
+```text
 # Clinical IQ V1 — Controlled Prototype Build Specification
 
 ## Frozen V1 Scope
@@ -42,3 +52,4 @@ Every score must be traceable to one or more events.
 - Good reasoning with a bad outcome can still receive fair credit.
 - Every score can be explained from the event log.
 - AI text cannot alter scenario truth.
+```
