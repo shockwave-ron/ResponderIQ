@@ -1,25 +1,19 @@
 import Link from 'next/link';
 import { Card } from '@/components/Card';
-import { PlaceholderBadge } from '@/components/PlaceholderBadge';
-import { getAllTempScenarios } from '@/lib/temp-scenario-data';
+import { bls01 } from '@/lib/scenarios/bls-01';
 import styles from './scenarios.module.css';
 
 export default function ScenarioSelectionPage() {
-  const scenarios = getAllTempScenarios();
-
   return (
     <main>
-      <PlaceholderBadge />
       <h1 className={styles.heading}>Select a scenario</h1>
       <div className={styles.list}>
-        {scenarios.map((scenario) => (
-          <Link key={scenario.id} href={`/scenarios/${scenario.id}`} className={styles.link}>
-            <Card>
-              <h2 className={styles.title}>{scenario.title}</h2>
-              <p className={styles.description}>{scenario.briefDescription}</p>
-            </Card>
-          </Link>
-        ))}
+        <Link href={`/scenarios/${bls01.id}`} className={styles.link}>
+          <Card>
+            <h2 className={styles.title}>{bls01.title}</h2>
+            <p className={styles.description}>{bls01.dispatchSummary}</p>
+          </Card>
+        </Link>
       </div>
     </main>
   );
