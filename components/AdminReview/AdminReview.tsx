@@ -51,7 +51,7 @@ export function AdminReview() {
         <p>
           This shows only the most recently completed BLS-01 playthrough saved in this browser.
           It is not authenticated, not secure, and not linked to any account. It is not multi-user
-          or multi-device, and nothing here is permanently stored \u2014 clearing this browser&apos;s
+          or multi-device, and nothing here is permanently stored — clearing this browser&apos;s
           storage removes it. Database-backed instructor review, across devices and learners, is a
           future requirement, not part of this build.
         </p>
