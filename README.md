@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ResponderIQ
 
-## Getting Started
+**Adaptive EMS training, built on real decisions.**
 
-First, run the development server:
+ResponderIQ is a browser-based simulator for emergency medical services (EMS)
+training. Instead of multiple-choice quizzes, it drops a trainee into a scenario
+that unfolds in simulated time: decisions cost minutes, events fire while you
+deliberate, and the situation adapts to the choices you make. Afterward, the
+engine scores the run across behavioral categories — scene safety, resource
+management, communication, prioritization, and more — and produces a plain-language
+debrief, plus a detailed review view for administrators.
+
+The first scenario, **BLS-01 — "Second Floor, No Elevator,"** is a residential
+fall where the real challenge isn't the diagnosis: it's getting the patient three
+flights down safely with the crew and equipment you brought or thought to call
+for. It's deliberately designed so more than one plan can succeed.
+
+## Tech stack
+
+- [Next.js](https://nextjs.org) (App Router) + React
+- TypeScript
+- [Vitest](https://vitest.dev) for unit tests
+
+The simulation logic lives in [`lib/engine`](lib/engine) (clock, reducer, scoring,
+resources, differential, debrief) and is intentionally scoped to what BLS-01
+needs — a minimal reusable engine rather than a general-purpose EMS model.
+Scenarios live in [`lib/scenarios`](lib/scenarios); UI lives in
+[`app`](app) and [`components`](components).
+
+## Getting started
+
+Install dependencies and start the dev server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Build for production |
+| `npm start` | Run the production build |
+| `npm test` | Run the test suite (Vitest) |
+| `npm run lint` | Lint with ESLint |
+| `npm run typecheck` | Type-check with `tsc --noEmit` |
 
-## Learn More
+## Project layout
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+app/            Next.js routes (home, scenarios, admin review)
+components/     Reusable UI (Button, Card, SimulatorPlayer, AdminReview)
+lib/engine/     Simulation engine — clock, reducer, scoring, debrief
+lib/scenarios/  Scenario definitions (BLS-01)
+docs/           Design notes and archived specs
+```
