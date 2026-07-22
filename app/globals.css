@@ -55,3 +55,10 @@ a {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Explicit in-app override (Settings), independent of the OS-level query above. */
+[data-reduced-motion='true'] * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}

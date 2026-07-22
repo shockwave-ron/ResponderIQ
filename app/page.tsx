@@ -6,7 +6,7 @@ export default function HomePage() {
     <main>
       <div className={styles.wordmark}>ResponderIQ</div>
       <p className={styles.tagline}>Adaptive EMS training, built on real decisions.</p>
-      <Button href="/scenarios">Begin training</Button>
+      <Button href="/dashboard">Begin training</Button>
     </main>
   );
 }

@@ -1,0 +1,122 @@
+.wrap {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.subheading {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toggleRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.toggleRow input {
+  margin-top: 0.3rem;
+}
+
+.toggleLabel {
+  display: block;
+  font-weight: 600;
+}
+
+.toggleHint {
+  display: block;
+  color: var(--fg-muted);
+  font-size: 0.875rem;
+  margin-top: 0.2rem;
+}
+
+.hint {
+  color: var(--fg-muted);
+  font-size: 0.95rem;
+}
+
+.confirmRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.confirmation {
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+.secondaryButton,
+.dangerButton {
+  align-self: flex-start;
+  border-radius: 6px;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: var(--fg);
+  border: 1px solid var(--border);
+}
+
+.secondaryButton:hover {
+  border-color: var(--fg);
+}
+
+.secondaryButton:disabled {
+  color: var(--fg-muted);
+  cursor: not-allowed;
+}
+
+.secondaryButton:disabled:hover {
+  border-color: var(--border);
+}
+
+.dangerButton {
+  background-color: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.dangerButton:hover {
+  background-color: var(--accent-muted);
+}
+
+.backLink {
+  color: var(--fg-muted);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.backLink:hover {
+  color: var(--fg);
+}
